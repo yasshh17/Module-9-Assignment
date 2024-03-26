@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pizza Registration</h1>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required minlength="3">
+                <div class="error" id="name-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="year-of-birth">Year of Birth:</label>
+                <input type="number" id="year-of-birth" name="year-of-birth" required min="1901" max="2099">
+                <div class="error" id="year-of-birth-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="us-resident">Do you live in the United States?</label>
+                <input type="checkbox" id="us-resident" name="us-resident">
+            </div>
+            <div class="form-group" id="zipcode-group">
+                <label for="zipcode">Zipcode:</label>
+                <input type="number" id="zipcode" name="zipcode" minlength="5" maxlength="5">
+                <div class="error" id="zipcode-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8">
+                <div class="error" id="password-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="pizza">Preferred type of pizza:</label>
+                <select id="pizza" name="pizza" required>
+                    <option value="">Select</option>
+                    <option value="pineapple">With pineapple</option>
+                    <option value="no-pineapple">Without pineapple</option>
+                    <option value="no-pizza">I do not like pizza</option>
+                </select>
+                <div class="error" id="pizza-error"></div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="message" id="success-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
