@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // Clear previous error messages
+        
         clearErrors();
 
-        // Fetch form inputs
+        
         const name = document.getElementById('name').value;
         const yearOfBirth = document.getElementById('year-of-birth').value;
         const usResident = document.getElementById('us-resident').checked;
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
         const pizza = document.getElementById('pizza').value;
 
-        // Validate inputs
+        
         let valid = true;
 
         if (name.length < 3) {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             valid = false;
         }
 
-        // If all inputs are valid, show success message
+        
         if (valid) {
             const successMessage = document.getElementById('success-message');
             successMessage.textContent = 'Form submitted successfully! Enjoy your pizza!';
