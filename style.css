@@ -1,23 +1,48 @@
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-form {
-    margin-bottom: 20px;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar-brand {
+    margin: 0;
+    font-size: 24px;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.form-heading {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
 }
 
 .form-group {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+    font-size: 16px;
 }
 
 input[type="text"],
@@ -32,33 +57,14 @@ button {
     box-sizing: border-box;
 }
 
-button {
-    background-color: orange;
+input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+.submit-btn {
+    background-color: #007bff;
     color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.error {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-.message {
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #ccc;
-}
-
-.footer p {
-    margin: 0;
-    font-size: 14px;
-    color: #555;
-}
