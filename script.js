@@ -4,18 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        
         clearErrors();
 
-        
         const name = document.getElementById('name').value;
         const yearOfBirth = document.getElementById('year-of-birth').value;
         const usResident = document.getElementById('us-resident').checked;
-        const zipcode = document.getElementById('zipcode').value;
+        let zipcode = document.getElementById('zipcode').value;
         const password = document.getElementById('password').value;
         const pizza = document.getElementById('pizza').value;
 
-        
         let valid = true;
 
         if (name.length < 3) {
@@ -28,9 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
             valid = false;
         }
 
-        if (usResident && (zipcode.length !== 5 || isNaN(zipcode))) {
+        if (zipcode.length !== 5 || isNaN(zipcode)) {
             showError('zipcode', 'Zipcode must be a 5-digit number');
             valid = false;
+        } else {
+            zipcode = zipcode.padStart(5, '0'); 
         }
 
         if (password.length < 8) {
@@ -43,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
             valid = false;
         }
 
-        
         if (valid) {
             const successMessage = document.getElementById('success-message');
             successMessage.textContent = 'Form submitted successfully! Enjoy your pizza!';
